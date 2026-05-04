@@ -3,9 +3,10 @@
     uvicorn main:app --host 0.0.0.0 --port 8000
 
 Endpoints:
+    GET  /                         serve index.html (web UI)
     GET  /health                   health check
     POST /api/chat                 chat endpoint (streaming)
-    GET  /api/products             list all products (with optional filters)
+    GET  /api/products             list all products
     GET  /api/products/{id}        get a single product
     GET  /api/categories           list product categories
 """
@@ -16,7 +17,7 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, FileResponse
 from pydantic import BaseModel
 
 from rag import RAGEngine
@@ -62,6 +63,13 @@ class ChatResponse(BaseModel):
     intent: str
     citations: list[dict[str, Any]]
     confidence: float
+
+
+# ─── Web UI ──────────────────────────────────────────────────────────────────
+@app.get("/")
+def index():
+    """Serve the web UI"""
+    return FileResponse("index.html", media_type="text/html")
 
 
 # ─── Endpoints ───────────────────────────────────────────────────────────────
