@@ -1,0 +1,13 @@
+product_id,viscosity_grade,density_at_15c,viscosity_at_100c,viscosity_at_40c,viscosity_index,pour_point,flash_point,tbn
+# Format notes:
+# - One row per (product, grade). A product can have multiple rows for multiple viscosity grades.
+# - product_id format: lead_<sub-brand>_<number>, e.g. lead_zetta_15000, lead_yotta_15000
+# - Leave a cell blank if the value isn't available. Don't write "N/A" or "-".
+# - Units: density kg/l, viscosity cSt, pour/flash °C, TBN mg KOH/g
+#
+# Example rows (uncomment and verify against catalogue before using in production):
+# lead_zetta_15000,0W30,0.846,12.2,67.8,165,-45,250,8
+# lead_zetta_15000,5W30,0.850,12.1,72.8,164,-45,254,8
+# lead_yotta_15000,10W30,0.855,10.5,60,150,-47,230,10
+# lead_yotta_15000,10W40,0.855,12,68.5,170,-45,230,10
+# lead_yotta_15000,15W40,0.85,15.5,116,140,-42,230,10

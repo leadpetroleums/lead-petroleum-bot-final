@@ -1,0 +1,900 @@
+[
+  {
+    "id": "lead_zetta_15000",
+    "name": "LEAD ZETTA 15000",
+    "category": "Petrol Engine Oil",
+    "page_ref": 6,
+    "description": "LEAD ZETTA 15000 is a very high performance, fully synthetic LOW SAPS lubricant for gasoline and diesel engines, including the ones complying with EURO V standard. LEAD ZETTA 15000 is formulated to reduce pollutant emissions, such as HC, NOx, CO and particles and to protect and ensure longevity of post treatment anti-pollution systems, such as particulate filters (GPF, DPF) and three-way catalysts. LEAD ZETTA 15000 also helps to lengthen the engine life thanks to its excellent resistance to temperature variations and permits an extra-long oil change intervals.",
+    "application": "This product meets or exceeds the requirements of the latest API and ACEA industry specifications for petrol engine oils, as well as the requirements of many major American, and European engine manufacturers. Suitable for use in both gasoline and diesel passenger cars and light commercial vehicles.",
+    "properties": "Helps maintain efficiency of Diesel particulate filters and gasoline catalytic convertors Protects engines from wear and deposit build-up Helps fuel economy through reduced friction",
+    "performance_levels": "Meets and exceeds: API SN, ACEA C2/C3-16, MB 229.31/51/52, dexos™2, PSA B71 2290",
+    "api_level": "SN",
+    "certifications": [
+      "API SN",
+      "ACEA C2/C3-16",
+      "MB 229.31/51/52",
+      "dexos™2",
+      "PSA B71 2290"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_exa_10000",
+    "name": "LEAD EXA 10000",
+    "category": "Petrol Engine Oil",
+    "page_ref": 7,
+    "description": "LEAD EXA 10000 is a fully synthetic engine oil for gasoline and diesel passenger's cars engines, particularly suitablefor turbo compressed, multi-valve and direct injection diesel engines. LEAD EXA 10000 can be used in the most difficult operating conditions (motorways, dense urban traffic...), and is appropriated for all driving types. It is perfectly suited to engines with catalytic converters and all engines using lead free fuel or LPG. Its fluidity reduces friction and therefore creates significant fuel savings and reduces CO2 emissions. Especially adapted to long oil change intervals.",
+    "application": "This product meets or exceeds the requirements of the latest API and ACEA industry specifications for petrol engine oils, as well as the requirements of many major American, and European engine manufacturers.",
+    "properties": ">> Helps improve fuel economy Quick cold weather starting and fast >> protection helps to extend engine life Excellent overall lubrication and >> wear protection performance Helps to reduce oil aging resulting in long >> lasting protection",
+    "performance_levels": "Meets and exceeds: API SN/CF, ACEA A3/B4 MB 229.5/226.5, BMW LL01, VW 502/505RN 700/710, PSA B71 2296, Porsche A40",
+    "api_level": "SN/CF",
+    "certifications": [
+      "API SN/CF",
+      "ACEA A3/B4",
+      "MB 229.5/226",
+      "PSA B71 2296"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_exa_10000_5w40",
+    "name": "LEAD EXA 10000 5W40",
+    "category": "Petrol Engine Oil",
+    "page_ref": 8,
+    "description": "LEAD EXA 10000 is a fully synthetic engine oil for gasoline and diesel passenger's cars engines, particularly suitable for turbo compressed, multi-valve and direct injection diesel engines. LEAD EXA 10000 can be used in the most difficult operating conditions (motorways, dense urban traffic...), and is appropriated for all driving types. It is perfectly suited to engines with catalytic converters and all engines using lead free fuel or LPG. Its fluidity reduces friction and therefore creates significant fuel savings and reduces CO2 emissions. Especially adapted to long oil change intervals.",
+    "application": "This product meets or exceeds the requirements of the latest API and ACEA industry specifications for petrol engine oils, as well as the requirements of many major American, and European engine manufacturers.",
+    "properties": ">> Helps improve fuel economy Quick cold weather starting and fast >> protection helps to extend engine life Excellent overall lubrication and >> wear protection performance Helps to reduce oil aging resulting in >> long lasting protection",
+    "performance_levels": "Meets and exceeds: API SN/CF, ACEA A3/B4 MB 229.5/226.5, BMW LL01, VW 502/505RN 700/710, PSA B71 2296, Porsche A40",
+    "api_level": "SN/CF",
+    "certifications": [
+      "API SN/CF",
+      "ACEA A3/B4",
+      "MB 229.5/226",
+      "PSA B71 2296"
+    ],
+    "viscosity_grades": [
+      "5W40"
+    ],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_peta_10000",
+    "name": "LEAD PETA 10000",
+    "category": "Petrol Engine Oil",
+    "page_ref": 9,
+    "description": "LEAD PETA 10000 is a synthetic technology engine oil developed for the most recent requirement of gasolinepassenger engines. It meets all current industry standard requirements of domestic car makers recommending API SM.",
+    "application": "LEAD PETA 10000 can be used under the most difficult operating conditions (highways, congested city traffic, etc.) for every season. Recommended for all petrol engines (multi-valve and turbo types) turbo-charged or naturally aspirated in cars.",
+    "properties": ">> Maximum cleanliness Reduced >> engine maintenance costs Superior >> thermo-oxidative stability >> Excellent anti-wear technology",
+    "performance_levels": "Meets and exceeds: API SM; ACEA A3/B4 TYPIC AL PROPERTIES PARAMETERS TEST METHOD UNIT LEAD PETA 10000 Viscosity Grade 10W30 10W40 Density @ 15°C ASTM D1298 kg/l 0.870 0.874 Viscosity @ 100°C ASTM D445 cSt 10.5 14.5 Viscosity @ 40°C ASTM D445 cSt 69 97 Viscosity Index (min) ASTM D2270 - 143 160 Cold Crank Simulator ASTM D5293 cP <7,200 @ -25 °C <7,000 @ -25 °C Pour Point ASTM D97 °C -33 -25 Flash Point ASTM D92 °C >230 230 Total Base Number (TBN) ASTM D2896 KOH/g 9 10 The values shown above are typical values at the date of publication. LEAD Petroleum reserves the right to change these typical values without prior notice. 4",
+    "api_level": "SM",
+    "certifications": [
+      "API SM",
+      "ACEA A3/B4",
+      "ASTM D1298",
+      "ASTM D445",
+      "ASTM D2270",
+      "ASTM D5293",
+      "ASTM D97",
+      "ASTM D92",
+      "ASTM D2896"
+    ],
+    "viscosity_grades": [
+      "10W30",
+      "10W40"
+    ],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_tera_7000",
+    "name": "LEAD TERA 7000",
+    "category": "Petrol Engine Oil",
+    "page_ref": 10,
+    "description": "LEAD TERA 7000 is a premium multi grade motor oil formulated for passenger cars and light trucks enginesrequiring API performance level SL/CF under all operating conditions.",
+    "application": "LEAD TERA 7000 can be used under the most difficult operating conditions (highways, congested city traffic, etc.) for every season. Recommended for all petrol engines (multi-valve and turbo types) and all diesel engines, turbo-charged or naturally aspirated in cars and light vans.",
+    "properties": ">> Maximum cleanliness Reduced >> engine maintenance costs Superior >> thermo-oxidative stability >> Excellent anti-wear technology",
+    "performance_levels": "Meets and exceeds: API SL / CF; ACEA A3/B4 TYPICA L PROPERTIES PARAMETERS TEST METHOD UNIT LEAD TERA 70 00 Viscosity Grade 10W30 10W40 15W40 20W50 Density @ 15°C ASTM D1298 kg/l 0.870 0.874 0.889 0.890 Viscosity @ 100°C ASTM D445 cSt 11.5 14.5 15.8 18.5 Viscosity @ 40°C ASTM D445 cSt 76 97 122 160 Viscosity Index (min) ASTM D2270 - 140 160 135 132 Cold Crank Simulator ASTM D5293 cP <7,000 @ <7,000 @ <7,000 @ <9,500 @ -25 °C -25 °C -20 °C -15 °C Pour Point ASTM D97 °C -30 -25 -27 -27 Flash Point ASTM D92 °C 220 230 230 235 Total Base Number (TBN) ASTM D2896 KOH/g 10 10 10 10 The values shown above are typical values at the date of publication. LEAD Petroleum reserves the right to change these typical values without prior notice. 5",
+    "api_level": "SL",
+    "certifications": [
+      "API SL",
+      "ACEA A3/B4",
+      "ASTM D1298",
+      "ASTM D445",
+      "ASTM D2270",
+      "ASTM D5293",
+      "ASTM D97",
+      "ASTM D92",
+      "ASTM D2896"
+    ],
+    "viscosity_grades": [
+      "10W30",
+      "10W40",
+      "15W40",
+      "20W50"
+    ],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_hecto_5000",
+    "name": "LEAD HECTO 5000",
+    "category": "Petrol Engine Oil",
+    "page_ref": 11,
+    "description": "LEAD HECTO 5000 is a multi-functional mineral engine oil for older gasoline, diesel and LPG engines of passenger carand light vans with or without turbo compressor. Not suited for engines equipped with a Diesel of Gasoline Particle Filter (GPF, DPF).",
+    "application": "LEAD HECTO 5000 can be used under the most difficult operating conditions (highways, congested city traffic, etc.) for every season. Formulated for gasoline and diesel engines used in city and suburban driving conditions.",
+    "properties": ">> Maximum cleanliness Reduced >> engine maintenance costs Superior >> thermo-oxidative stability >> Excellent anti-wear technology",
+    "performance_levels": "Meets and exceeds: API SF/CF; ACEA A1/B1 TYPIC AL PROPERTIES PARAMETERS TEST METHOD UNIT LEAD HECTO 5000 Viscosity Grade 40 50 15W40 20W50 Density @ 15°C ASTM D1298 kg/l 0.898 0.890 0.880 0.890 Viscosity@ 100°C ASTM D445 cSt 16.1 19.9 14.5 17.8 202 Viscosity @ 40°C ASTM D445 cSt 162 105 144 Viscosity Index (min) ASTMD2270 - 102 113 135 136 Cold Crank Simulator ASTMD5293 cP - - <7,000 @ <9,500 @ -20 °C -15°C PourPoint ASTM D97 °C -22 -25 -33 -33 Flash Point ASTM D92 °C 226 248 220 220 Total Base Number (TBN) ASTM D2896 KOH/g 10 10 10 10 The values shown above are typical values at the date of publication. LEAD Petroleum reserves the right to change these typical values without prior notice. 6",
+    "api_level": "SF/CF",
+    "certifications": [
+      "API SF/CF",
+      "ACEA A1/B1",
+      "ASTM D1298",
+      "ASTM D445",
+      "ASTM D97",
+      "ASTM D92",
+      "ASTM D2896"
+    ],
+    "viscosity_grades": [
+      "15W40",
+      "20W50"
+    ],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_yotta_15000",
+    "name": "LEAD YOTTA 15000",
+    "category": "Diesel Engine Oil",
+    "page_ref": 14,
+    "description": "LEAD YOTTA 15000 is an advanced fully synthetic heavy-duty diesel engine oil that helps extend engine lifewhile providing long drain capability and potential fuel economy for modern diesel engines operating in severe applications. This product is formulated to deliver exceptional performance in modern and older hard-working engines. LEAD YOTTA 15000 is formulated to reduce pollutant emissions, such as HC, NOx, CO and particles and to protect and ensure longevity of post treatment anti-pollution systems, such as particulate filters (GPF, DPF) and three-way catalysts.",
+    "application": "LEAD YOTTA 15000 CK-4 oils replace CJ-4 oils with the same viscosity grades and oil types (mineral/semi- synthetic/full-synthetic) and are backwards compatible down to CF-4 oils. This product meets or exceeds the requirements of the latest API and ACEA industry specifications for diesel engine oils, as well as the requirements of many major American, and European engine manufacturers.",
+    "properties": null,
+    "performance_levels": "Meets and exceeds: API CK-4/SN ; E6/E9/E7-16; 228.51; M3477; MTU 3.1; DQC IV-10LA; ECF-3 ; VDS 4.5; VDS 4; CES 20081; CES 20086; DDC 93K222 ; M3677 &Scania in progress.",
+    "api_level": "CK-4/SN",
+    "certifications": [
+      "API CK-4/SN"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_giga_10000",
+    "name": "LEAD GIGA 10000",
+    "category": "Diesel Engine Oil",
+    "page_ref": 15,
+    "description": "LEAD GIGA 10000 is an extra high-performance diesel engine oil that helps extend engine life in the mostsevere on and off-highway applications while delivering outstanding performance in modern, high-output, low-emission engines including those with Exhaust Gas Recirculation (EGR) and After-treatment Systems with Diesel Particulate Filters (DPFs) and Diesel Oxidation Catalysts (DOCs).",
+    "application": "This product meets or exceeds the requirements of the latest API and ACEA industry specifications for diesel engine oils, as well as the requirements of many major American, and European engine manufacturers. Recommended for use in a wide range of heavy-duty applications and operating environments found in the on-road transport and off-road mining, forestry, construction, and agricultural industries.",
+    "properties": ">> Outstanding thermal and oxidative >> stability Excellent TBN reserves Stay-in- >> grade shear stability Excellent low >> temperature pumpability",
+    "performance_levels": "Meets and exceeds: API CJ-4, CI-4 PLUS, CI-4, CH-4, CG-4, CF-4, CF ; API SM, SL, SJ, SH, SG, SF ; ACEA E7/E9 ; Recommended for use in Caterpillar, Cummins, Detroit Diesel, Mack, Volvo, Scania, Renault, Iveco and many diesel engines.",
+    "api_level": "CJ-4/SM",
+    "certifications": [
+      "API CJ-4",
+      "API SM",
+      "ACEA E7/E9"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_mega_7000",
+    "name": "LEAD MEGA 7000",
+    "category": "Diesel Engine Oil",
+    "page_ref": 16,
+    "description": "LEAD MEGA 7000 is a heavy duty mineral based diesel engine oil recommended for turbo-charged and non-turbo- charged engines under normal conditions. Suitable for many heavy-duty engines. It meets all current industry standard requirements of major engine makers recommending API CH-4.",
+    "application": "LEAD MEGA 7000 provides excellent protection against piston deposits controls engine wear, gives long engine life, maintains engine power and efficiency and lowers servicing costs.",
+    "properties": ">> Excellent protection against piston deposits Controls engine >> wear High detergency, gives long engine life Maintains engine >> power and efficiency and lowers servicing costs",
+    "performance_levels": "Meets and exceeds: ACEA E7-12 (2012) API CI-4 API CH-4 API CG-4; API CF-4 API CF API SL MB-Approval 228.3; Volvo VDS-3 Renault Truck RLD-2 Mack EO-N Mack EO-M Plus; MAN M 3275 Cummins CES 20076 Cummins CES 20077 Cummins CES 20078; CAT ECF-1-a CAT ECF-2 MTU Type 2 Deutz DQC III-10; Detroit Diesel DDC 93K215 Global DHD-1",
+    "api_level": "CI-4/CH-4/CG-4/CF-4/CF/SL",
+    "certifications": [
+      "API CI-4",
+      "API CH-4",
+      "API CG-4",
+      "API CF-4",
+      "API CF",
+      "API SL",
+      "ACEA E7-12"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_zepto_5000",
+    "name": "LEAD ZEPTO 5000",
+    "category": "Diesel Engine Oil",
+    "page_ref": 17,
+    "description": "LEAD ZEPTO 5000 is a heavy duty diesel engine oil recommended for turbo-charged and non-turbo-charged enginesunder normal conditions. Suitable for many heavy duty engines. It meets all current industry standard requirements of major engine makers recommending API CF-4/SG, CF/SF.",
+    "application": "LEAD ZEPTO 5000 can be used in older trucks and buses as well as for cost effective lubrication in off-highway",
+    "properties": ">> Maximum cleanliness Reduced >> engine maintenance costs Superior >> thermo-oxidative stability >> Excellent anti-wear technology",
+    "performance_levels": "Meets and exceeds: API CF-4, CF-2, CF; Recommended for use in Caterpillar, Cummins, Detroit Diesel, Mack, Volvo, Scania, Renault, Iveco and many diesel engines.",
+    "api_level": "CF-4",
+    "certifications": [
+      "API CF-4"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_zetta_4t_racing",
+    "name": "LEAD ZETTA 4T RACING",
+    "category": "Diesel Engine Oil",
+    "page_ref": 20,
+    "description": "LEAD ZETTA 4T Racing is a 100% synthetic 4-Stroke lubricant. Excellent shear resistance protecting engine andgearbox. Smooth shifting. Meets JASO MA2 specifications for optimal wet clutch performance..",
+    "application": "Meets bike manufacturer specifications, especially BMW, KTM and MV AGUSTA which recommend SAE 5W40. Suitable for catalytic converters. Specifically designed for powerful and recent scooters and maxi-scooters fitted with 4 stroke engines, any engine displacement, with or without catalytic converters, with integrated gearbox and wet clutch.",
+    "properties": ">> Reduces engine internal friction Improves >> mechanical efficiency Very low volatility to reduce >> oil consumption Anti-oxidation, Anti-corrosion, >> Anti-foam properties",
+    "performance_levels": "Meets and exceeds: API SN / SM / SL / SJ / SH / SG; JASO MA / MA2",
+    "api_level": "SN",
+    "certifications": [
+      "API SN",
+      "JASO MA"
+    ],
+    "viscosity_grades": [
+      "5W40"
+    ],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_zetta_4t_endurance",
+    "name": "LEAD ZETTA 4T ENDURANCE",
+    "category": "Diesel Engine Oil",
+    "page_ref": 21,
+    "description": "LEAD ZETTA 4T ENDURANCE is a 100% synthetic 4-Stroke lubricant. Excellent shear resistance protecting engine andgearbox. Smooth shifting. Meets JASO MA2 specifications for optimal wet clutch performance..",
+    "application": "For scooters without wet clutch and where JASO MB specification is required.",
+    "properties": ">> Reduces oil Consumption >> Provides Low Emission >> Outstanding detergent and anti-wear properties",
+    "performance_levels": "Meets and exceeds: API SN / SM / SL / SJ / SH / SG; JASO MA / MA2",
+    "api_level": "SN",
+    "certifications": [
+      "API SN",
+      "JASO MA"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_exa_4t_super",
+    "name": "LEAD EXA 4T SUPER",
+    "category": "Diesel Engine Oil",
+    "page_ref": 22,
+    "description": "LEAD EXA 4T Super is a synthetic technology 4-Stroke lubricant. Excellent shear resistance protecting engine andgearbox. Smooth shifting. Meets JASO MA2 specifications for optimal wet clutch performance.",
+    "application": "Primarily intended for general use in all types of four-stroke motorcycles and engines, especially Hero, Yamaha and Honda with <150 cc engines. Suitable for catalytic converters.",
+    "properties": ">> Good wear protection Thermal and oxidation >> stability Helps keep engines clean for smoother >> operation Helps extend engine life",
+    "performance_levels": "Meets and exceeds: API SL / SJ / SH / SG; JASO MA / MA2",
+    "api_level": "SL",
+    "certifications": [
+      "API SL",
+      "JASO MA"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_tera_4t_eco",
+    "name": "LEAD TERA 4T ECO",
+    "category": "Motorcycle Oil",
+    "page_ref": 23,
+    "description": "LEAD TERA 4T Eco SAE 20W40 / 20W50 is a mineral motorcycle oil designed primarily for on-road, four-cycle bikes. It also may be used in other types of on and off-road four-cycle motorcycles. Meets JASO MA1 specifications for optimal wet clutch performance. Suitable for old motorcycles.",
+    "application": "Primarily intended for general use in all types of four-stroke motorcycles and engines, especially Hero, Yamaha and Honda with <150 cc engines. Suitable for catalytic converters.",
+    "properties": null,
+    "performance_levels": "Meets and exceeds: API SG; JASO MA / MA1",
+    "api_level": "SG",
+    "certifications": [
+      "API SG",
+      "JASO MA"
+    ],
+    "viscosity_grades": [
+      "20W40",
+      "20W50"
+    ],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_tera_4t_super_scooter",
+    "name": "LEAD TERA 4T SUPER SCOOTER",
+    "category": "Motorcycle Oil",
+    "page_ref": 24,
+    "description": "LEAD TERA 4T Super Scooter is a synthetic technology motorcycle oil specially designed to meet today's 4- Strokescooter specifications where JASO MB specification is required. JASO MB lubricant ensures optimal engine performance and fuel economy on all scooters without wet clutch.",
+    "application": "For scooters without wet clutch and where JASO MB specification is required.",
+    "properties": ">> Reduces oil consumption Provides Low >> Emission Outstanding detergent and anti- >> wear properties",
+    "performance_levels": "Meets and exceeds: API SL / SJ / SH / SG; JASO MB",
+    "api_level": "SL",
+    "certifications": [
+      "API SL",
+      "JASO MB"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_deci_2t",
+    "name": "LEAD DECI 2T",
+    "category": "Motorcycle Oil",
+    "page_ref": 25,
+    "description": "LEAD DECI 2T is a lubricant for 2-Stroke scooter engines with premix or injector lube system, operating at high rpm.Reinforced with synthetic base stocks for outstanding oil film resistance and anti-wear protection. Minimizes smoke and deposits.",
+    "application": "For use in motorcycles, snowmobiles and lean oil/fuel ratio chain saws.",
+    "properties": ">> Good wear protection Thermal and oxidation >> stability and deposit control Reduces pre- >> ignition Good corrosion protection properties",
+    "performance_levels": "Meets and exceeds: API TC; JASO FC",
+    "api_level": "TC",
+    "certifications": [
+      "API TC",
+      "JASO FC"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_deca_2t_outboard_tc_w3",
+    "name": "LEAD DECA 2T OUTBOARD TC-W3",
+    "category": "Motorcycle Oil",
+    "page_ref": 27,
+    "description": "LEAD DECA 2T OUTBOARD TC-W3 is a high quality two stroke engine lubricant that delivers excellent performance inwater-cooled and air-cooled applications. It is formulated to provide excellent lubrication and deposit control in a wide range of applications.",
+    "application": "Recommended for use in two-stroke engines where TC-W3 or earlier general-purpose lubricants are recommended. These applications include outboard engines, motorcycles, lawn mowers, scooters, golf carts, chain saws, and other two-stroke powered equipment.",
+    "properties": ">> Exceptionally clean engines Excellent rust >> protection Long spark plug life Easy mixing >> and stable mixtures with gasolines",
+    "performance_levels": "Meets and exceeds: API TC for gasoline engines air cooled 2 strokes (20 to 500 c.c.). NMMA TC-W3 for gasoline engines water cooled 2 strokes.",
+    "api_level": "TC",
+    "certifications": [
+      "API TC"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_atto_aft_vi",
+    "name": "LEAD ATTO AFT VI",
+    "category": "ATF Fluids",
+    "page_ref": 30,
+    "description": "LEAD ATTO ATF-VI is a high performance, fully synthetic automatic transmission fluid that meets or exceeds the stringentrequirements of DEXRON-VI specification and provides warranty protection for 2006 and newer General Motor's vehicles. It also provides improved performance in older vehicles, wherever DEXRON is specified.",
+    "application": "For most 2006 and newer GM vehicles.",
+    "properties": ">> Extended fluid life Improved oxidation and thermal stability Outstanding >> resistance against sludge and deposit formation Improved anti-wear >> protection which contributes to extended transmission life Outstanding low >> temperature performance",
+    "performance_levels": "Meets and exceeds: General Motor's DEXRON-VI",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_atto_atf_dx_iii",
+    "name": "LEAD ATTO ATF DX-III",
+    "category": "ATF Fluids",
+    "page_ref": 31,
+    "description": "LEAD ATTO ATF DX- III is a 100% synthetic blend multipurpose transmission fluid for use in automatic gear boxes post 2005,where Dexron III is quoted. Also suitable for certain power steering systems, torque converters, change- gearboxes, fluid clutches and non-complicated hydraulic systems. LEAD ATTO ATF DX- III has a sophisticated combination of high quality synthetic base oils and viscosity index improve, anti-oxidant, anti-wear, detergent, and friction modifying additives.",
+    "application": "Used in automatic transmissions and manual transmissions, in torque converters and numerous power steering systems in accordance with the specifications of the manufacturer.",
+    "properties": ">> Smooth transmission and perfect >> Excellent low temperature operation, ensuring Synchronization prompt circulation of fluid >> Longer retention of frictional characteristics >> Good protection, against wear, resistance to rust, under continual severe operating conditions corrosion and foam >> Protection against deposit formation and >> Compatible with seal materials used in evaporation losses at high operating transmission units Temperatures >> Lower maintenance costs, and improved operating profit",
+    "performance_levels": "Meets and exceeds: GM DEXRON II I H, Ford Mercon, Allison C-4",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_atto_atf_type_a",
+    "name": "LEAD ATTO ATF TYPE A",
+    "category": "ATF Fluids",
+    "page_ref": 32,
+    "description": "LEAD ATTO ATF TYPE A is multipurpose automatic transmission fluid for use in automatic gear boxes and power steering systems of vehicles where TYPE A suffix A is recommended.",
+    "application": "Automatic transmissions in certain older cars and for the makeup and refill in power steering systems.",
+    "properties": null,
+    "performance_levels": "Meets and exceeds: Meets the requirements of ATF (Automatic Transmission Fluid) Meets the requirements of General Motor's TYPE A Suffix A",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_atto_atf_ws",
+    "name": "LEAD ATTO ATF WS",
+    "category": "ATF Fluids",
+    "page_ref": 33,
+    "description": "LEAD ATTO ATF WS is a special synthetic hydraulic liquid for Toyota transmissions with the control of speeds slide.Thoroughly selected additives and synthetic components provide the best friction properties when gear changing, perfect low-temperature properties, high anti-oxygenic and chemical stability during the whole operation cycle.",
+    "application": "For most of the 5- and 6-stepped automatic transmissions used in Toyota cars since 2005.",
+    "properties": ">> Smooth transmission and perfect synchronization Longer retention of frictional >> characteristics under continual severe operating conditions Protection against deposit >> formation and evaporation losses at high operating temperatures Excellent low >> temperature operation, ensuring prompt circulation of fluid Good protection, against >> wear, resistance to rust, corrosion and foam Compatible with seal materials used in >> transmission units Lower maintenance costs, and improved operating profit",
+    "performance_levels": "Meets and exceeds: AISIN WARNER; BMW 4 and 5 speed European; CHRYSLE R ATF +3 / 4; MAN 339; Type Z-1; MB 4 and speed European; TOYOTA T-III / T-IV / WS Lifetime; V OITH ATs 55.6335; VW 4 a nd 5 speed Euro pean PARAMETERS TEST METHOD UNIT LEAD ATTO ATF WS Density @ 15°C ASTMD1298 kg/l 0.846 Viscosit y @ 100°C cS t 7,05 ASTMD445 Viscosi ty @ 40°C ASTMD445 cS t 34,5 Viscosity Index (min) ASTMD2270 - 172 Brookfie ldViscosity @-40 °C ASTMD2983 cP 13,100 Pour Point ASTMD97 °C -45 Flash Point ASTMD92 °C 216 The values s hown above are typical values at the date of publication. LEAD Petroleum reserves the right to change these typical values without prior notice. 21",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_atto_atf_cvt",
+    "name": "LEAD ATTO ATF CVT",
+    "category": "ATF Fluids",
+    "page_ref": 34,
+    "description": "LEAD ATTO ATF CVT is a high-performance transmission oil formulated with selected base stocks and special recommendedfor use in latest generations of Continuously Variable Automatic Transmissions (CVT) which transfer traction via steel-made traction chains or belts is specifically formulated for today's technologically sophisticated variable transmissions. It is formulated with premium synthetic base stocks, long-life friction modifiers, special anti-wear additives, and shear stable viscosity modifiers.",
+    "application": "Recommended for use in most belt and chain-driven continuously variable transmissions and will not void new car warranties. Not recommended for Hybrid CVT units (Toyota and Ford).",
+    "properties": ">> Full synthetic fluid Excellent anti-shudder >> durability Superior wet clutch performance >> Excellent anti-wear performance Excellent >> metal-metal friction protection Designed to >> provide excellent torque transfer",
+    "performance_levels": "Meets and exceeds: BMW Mini Cooper EZL 799 ;Dodge/Jeep NS-2, CVTF+4 ;Ford CVT23, CVT30/Motorcraft XT-7-QCFT, Mercon C; GM/ Saturn DEX-CVT ; Honda HMMF, HCF-2; Hyundai/ Kia CVT applications (SP-CVT 1) ; Mazda CVTF 3320; Mercedes Benz 236.20 ; Mitsubishi CVTF-J1, CVTF-J4; Nissan NS-2, NS-3 ; Shell Green 1V;Subaru Lineartronic CVTF (P/N K0425Y0710), CV-30, High Torque CVTF, e-CVTF ; Suzuki TC, NS-2, CVTF 3320, CVT Green 1, CVT Green 2; Toyota TC, FE ; Volkswagen/Audi TL 52180; G 052 180, G 052 516. PARAMETERS TEST METHOD UNIT LEAD ATTO ATF CVT Viscosity Grade - Density @ 15°C ASTMD1298 kg/l 0.848 Viscosity@100C ASTMD445 cSt 7.5 cSt Viscosity @40°C ASTMD445 34 Viscosity Index (min) ASTMD2270 - 175 Brookfeild Viscosity @-40°C AS TMD2983 cP 12,00 0 °C -42 Pour Point ASTMD97 Flash Point ASTM D92 °C 210 The values shown above are typical values at the date of publication. LEAD Petroleum reserves the right to change these typical values without prior notice.",
+    "api_level": null,
+    "certifications": [
+      "ASTM D92"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_famto_sae_90_140",
+    "name": "LEAD FAMTO SAE 90/140",
+    "category": "Gear Oil",
+    "page_ref": 37,
+    "description": "LEAD FEMTO SAE 90 / 140 is a high-performance, high-pressure Gear Oil manufactured from high quality mineral baseoils and multifunctional \"extreme pressure\" additives.",
+    "application": "LEAD FEMTO SAE 90 / 140 is used in powered transmission and axle drives for cars, highway light and heavy duty trucks, busses, and vans where an API GL-5 is required.",
+    "properties": ">> Highest pressure-absorption capability >> Wear reduction Noise reduction Excellent >> viscosity/temperature properties >> Excellent ageing resistance All sealing >> materials compatibility",
+    "performance_levels": "Meets and exceeds: API GL-5",
+    "api_level": "GL-5",
+    "certifications": [
+      "API GL-5"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_famto_sae_90_140_api",
+    "name": "LEAD FAMTO SAE 90/140 API",
+    "category": "Gear Oil",
+    "page_ref": 38,
+    "description": "LEAD FEMTO SAE 90 / 140 is a high-performance, high-pressure gear oil manufactured from high quality mineral baseoils and multifunctional \"extreme pressure\" additives.",
+    "application": "LEAD FEMTO SAE 90 / 140 is used in powered transmission and axle drives for cars, highway light and heavy duty trucks, busses, and vans where an API GL-4 is required.",
+    "properties": ">> Highest pressure-absorption capability >> Wear reduction Noise reduction Excellent >> viscosity/temperature properties >> Excellent ageing resistance All sealing >> materials compatibility",
+    "performance_levels": "Meets and exceeds: API GL-4",
+    "api_level": "GL-4",
+    "certifications": [
+      "API GL-4"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_famto_sae_85w90_85w140",
+    "name": "LEAD FAMTO SAE 85W90/85W140",
+    "category": "Gear Oil",
+    "page_ref": 39,
+    "description": "LEAD FEMTO SAE 85W90 / 85W140 is a high-performance multigrade, high-pressure gear oil manufactured from highquality mineral base oils and multifunctional \"extreme pressure\" additives. It provides excellent low temperature fluidity for safe lubrication during very low temperature transmission and transaxle start up, and also maintains a thick protective oil film during extremely hot operating conditions.",
+    "application": "For use in applications requiring API GL-5 performance such as heavy duty differentials, axles, and final drives where extreme pressures and shock loading are expected.",
+    "properties": ">> Excellent frictional properties Excellent rust, staining, and >> corrosion protection Compatible with typical automotive seals >> and gaskets Good thermal stability and resistance to high >> temperature oxidation",
+    "performance_levels": "Meets and exceeds: API GL-5",
+    "api_level": "GL-5",
+    "certifications": [
+      "API GL-5"
+    ],
+    "viscosity_grades": [
+      "85W140",
+      "85W90"
+    ],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_famto_sae",
+    "name": "LEAD FAMTO SAE",
+    "category": "Gear Oil",
+    "page_ref": 40,
+    "description": "LEAD FEMTO SAE 75W90 / 75W140 is a fully synthetic gear lubricant formulated from synthetic base oils and anadvanced additive system. It is designed for use in many railway gearboxes and provides excellent load- carrying capability where extreme pressures and shock loading are expected.",
+    "application": "LEAD FEMTO provides excellent low temperature fluidity for safe lubrication during very low temperature transmission and transaxle startup, and also maintains a thick protective oil film during extremely hot operating conditions. Used in powered transmission and axle drives for cars, highway light and heavy-duty trucks, busses, and vans where an API GL- 5 is required.",
+    "properties": ">> Exceptional thermal stability >> Enhanced frictional properties >> Resistance to high temperature oxidation >> Outstanding protection against low speed/high torque wear",
+    "performance_levels": "Meets and exceeds: API GL-5",
+    "api_level": "GL-5",
+    "certifications": [
+      "API GL-5"
+    ],
+    "viscosity_grades": [
+      "75W140",
+      "75W90"
+    ],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_coolant_100",
+    "name": "LEAD COOLANT 100%",
+    "category": "Coolant",
+    "page_ref": 43,
+    "description": "LEAD COOLANT 100% CONCENTRATE is a concentrate automotive radiator fluid composed of demineralized water,ethylene glycol and an advanced blend of balanced corrosion inhibitors. It's designed to protect the cooling systems of water-cooled petrol engines.",
+    "application": "The majority of passenger cars' and light diesel vehicles' radiators can use LEAD COOLANT. LEAD COOLANT is a full mono ethylene glycol based coolant for a liquid cooled crankcase system. It contains anti-corrosion and anti-rust additives. It is harmless to rubber and does not foam or clog radiators. It must be mixed with water to a concentration of 33%, 40% & 50%. NEVER used more than 50%.",
+    "properties": ">> Not ready for use. Must be LEAD COOLNAT 100%. WATER Freeze Protect ion >> diluted Dilution chart: 33% 67% -18 °C 50% 50% -36 °C 60% 40% -52 °C",
+    "performance_levels": "Meets and exceeds: ASTM D 3306; ASTM D 4656; ASTM D 4985; ASTM D 5345; SAE J814C; SAE J1038; SAE J1941; SAE J1034; GM 1899M; GM 6043M; GM 1825M; Ford ESE-M97B44-A; Ford ESE-M97B18-C; Chrysler MS-7170; Freightliner 48-22880; Cummins 90T8-4; Waukesha 4-19470; White (GMC Div. Of Volvo); John Deere 8650-5; Case Corp. MS1710; Navistar B1 (B6-008GO); Cummins 3666132; Detroit Diesel 7SE298; Ford New Holland 9-86; John Deere H-5; Mack Truck 014GS17004; ATA RP 302A",
+    "api_level": null,
+    "certifications": [
+      "ASTM D 3306",
+      "ASTM D 4656",
+      "ASTM D 4985",
+      "ASTM D 5345"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_coolant",
+    "name": "LEAD COOLANT",
+    "category": "Coolant",
+    "page_ref": 44,
+    "description": "LEAD COOLANT, pre-mixed ready for use. Ethylene glycol based. For use in all makes and modelsof cars, both automotive engines and heavy-duty diesel engines. It's designed to protect the cooling systems of water-cooled petrol engines.",
+    "application": "The majority of passenger cars' and light diesel vehicles' radiators can use LEAD COOLANT. LEAD COOLANT is a full mono ethylene glycol based coolant for a liquid cooled crankcase system. It contains anti-corrosion and anti-rust additives. It is harmless to rubber and does not foam or clog radiators.",
+    "properties": ">> Ready for use Efficient protection down to -36°C >> during winter condition Does not foam or clog radiators",
+    "performance_levels": "Meets and exceeds: ASTM D 3306; ASTM D 4656; ASTM D 4985; ASTM D 5345; SAE J814C; SAE J1038; SAE J1941; SAE J1034; GM 1899M; GM 6043M; GM 1825M; Ford ESE-M97B44-A; Ford ESE-M97B18-C; Chrysler MS-7170; Freightliner 48-22880; Cummins 90T8-4; Waukesha 4-19470; White (GMC Div. Of Volvo); John Deere 8650-5; Case Corp. MS1710; Navistar B1 (B6-008GO); Cummins 3666132; Detroit Diesel 7SE298; Ford New Holland 9-86; John Deere H-5; Mack Truck 014GS17004; ATA RP 302A",
+    "api_level": null,
+    "certifications": [
+      "ASTM D 3306",
+      "ASTM D 4656",
+      "ASTM D 4985",
+      "ASTM D 5345"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_brake_fluid_dot_5_1",
+    "name": "LEAD BRAKE FLUID DOT 5.1",
+    "category": "Brake Fluid",
+    "page_ref": 47,
+    "description": "LEAD BRAKE FLUID DOT 5.1 developed for vehicles with high performance hydraulic brake systems working in severeservices.",
+    "application": "Recommended for brake circuits in all vehicles using synthetic fluids where DOT 5.1 level is required and especially for vehicles operating in very severe conditions. It is used in competition. Miscible with other synthetic fluids of chemical type such as DOT 3, DOT 4 and DOT 5.1. Not miscible with mineral base fluids of LHM type and fluids of DOT 5.1 type with silicon. Designed for vehicles fitted with modern braking and ABS systems. For superior braking in extreme conditions. Compatible with all brake systems requiring DOT 5.1 brake fluids.",
+    "properties": ">> High boiling point, far superior than DOT 4.0 >> Compatible with joints and seals to prevent >> fluid loss Great thermal stability",
+    "performance_levels": "Meets and exceeds: FMVSS No. 116 DOT 3; SAE J1703",
+    "api_level": null,
+    "certifications": [
+      "DOT 3"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_brake_fluid_dot_4",
+    "name": "LEAD BRAKE FLUID DOT 4",
+    "category": "Brake Fluid",
+    "page_ref": 48,
+    "description": "LEAD BRAKE FLUID DOT 4 is a heavy-duty synthetic brake fluid, contains antioxidant, metal deactivator and corrosioninhibitor to ensure long service life of brake fluid and brake components. Due to high boiling point, it does not give vapour lock problems in high temperature working conditions.",
+    "application": "For automotive applications where a DOT4 fluid is specified. It should not be used where DOT 5 or mineral oil-based fluids are specified.",
+    "properties": ">> High boiling point Minimum >> rubber component swell >> Excellent corrosion protection",
+    "performance_levels": "Meets and exceeds: FMVSS No. 116 DOT 4; SAE J1703",
+    "api_level": null,
+    "certifications": [
+      "DOT 4"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_b_rake_fluid_dot_3",
+    "name": "LEAD B RAKE FLUID DOT 3",
+    "category": "Brake Fluid",
+    "page_ref": 49,
+    "description": "LEAD BRAKE FLUID DOT 3 is a heavy-duty synthetic brake fluid, contains antioxidant, metal deactivator and corrosioninhibitor to ensure long service life of brake fluid and brake components. Due to high boiling point, it does not give vapour lock problems in high temperature working conditions.",
+    "application": "It has excellent low temperature properties and recommended for all conventional drum and disc brake systems. LEAD BRAKE FLUID DOT 3 can also be used in hydraulic clutch release systems.",
+    "properties": ">> High boiling point Minimum >> rubber component swell >> Excellent corrosion protection",
+    "performance_levels": "Meets and exceeds: FMVSS No. 116 DOT 3; SAE J1703",
+    "api_level": null,
+    "certifications": [
+      "DOT 3"
+    ],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_yocto",
+    "name": "LEAD YOCTO",
+    "category": "Grease",
+    "page_ref": 52,
+    "description": "LEAD YOCTO is a multipurpose grease for general lubrication under normal operating conditions and loads.",
+    "application": "Formulated for lubrication of all kinds of universal applications in transport, agriculture and off-road equipment, operating in wet, dusty and/or dry conditions. Lubrication of all kinds of bearings and joints when the temperature and loading conditions are normal. Suitable for passenger car, light truck and leisure vehicle applications.",
+    "properties": ">> Wide operating temperature range Good >> resistance to water washout Resistance >> to high temperature oxidation Extra >> protection against rust and corrosion",
+    "performance_levels": "Meets and exceeds: (cid:0) YOCTO MP2 specification meets and exceeds: >> ISO 6743-9: L-XBCEA 2; DIN 51502: K2K-25 YOCTO MP3 specification meets and exceeds: >> ISO 6743-9: L-XBCEA 3; DIN 51502: K3K-20",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_yocto_complex_ep",
+    "name": "LEAD YOCTO COMPLEX EP",
+    "category": "Grease",
+    "page_ref": 53,
+    "description": "LEAD YOCTO COMPLEX EP is designed for the lubrication various applications in all types of operating conditions,but particularly where the operation temperature is high and the use of conventional lithium greases is limited.",
+    "application": "Formulated for lubrication of roller-bearings, wheel bearings, universal joints, chassis, and various shock loaded or vibrating applications in transport, agriculture and off-road vehicles. Suitable as general-purpose grease for industrial",
+    "properties": ">> Reduced wear under heavy or shock loading >> Protection against rust and corrosion Resistance to >> water washout for equipment protection Extended >> bearing life",
+    "performance_levels": "Meets and exceeds: YOCTO Complex EP 2 specification meets and exceeds: >> ISO 6743-9: L-XBEHB 2; DIN 51502: LEAD 2P-20 YOCTO Complex EP 3 specification meets and exceeds: >> ISO 6743-9: L-XBDHB 3; DIN 51502: P3N-20",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_motp_3012",
+    "name": "LEAD MOTP 3012",
+    "category": "Grease",
+    "page_ref": 56,
+    "description": "LEAD TRUNK PISTON ENGINE OIL specially designed for modern Medium Speed 4-stroke Engines running Intermediate Fuel Oil (IFO) or Heavy Fuel Oil (HFO) LEAD TRUNK PISTON ENGINE OIL is a range of trunk piston engine oils developed for use in medium speed dieselengines burning residual fuels. This oil combines an exclusive formulation of latest additive technologies, and a highly refined base oil to provide a substantial safety margin to cope with the higher stress levels even with the latest and future designs of diesel engines.",
+    "application": "Turbocharged main and auxiliary engines of all types and all ratings running on Intermediate Fuel oil or on Heavy Fuel oil with high sulphur content Bearings and stern-tubes Reduction gear lubrication",
+    "properties": ">> Excellent thermal resistance and high temperature oxidation resistance Very good >> detergent and dispersant properties at high temperatures Good wear protection and oil >> film strength at extreme pressures Excellent water resistance Reduced build up heavy >> deposits in the engine leading to a reduction in maintenance costs Very good >> neutralizing capability of acidic products of combustion",
+    "performance_levels": null,
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_mocl_5080",
+    "name": "LEAD MOCL 5080",
+    "category": "Grease",
+    "page_ref": 57,
+    "description": "LEAD MARINE CYLINDER OIL specially formulated for modern Low Speed 2-stroke Marine Diesel Engines using High Oil sulphur Heavy Fuel Oil (HFO) LEAD MARINE CYLINDER LUBRICANT is a superior quality Marine Cylinder Lubricant (MCL) formulated for modern lowspeed crosshead diesel engines operating on intermediate or heavy fuels with a high sulphur level. This oil possesses outstanding acid neutralizing capability and provides excellent engine cleanliness and durability.",
+    "application": "Formulated for diesel engines operating with higher pressures & temperatures and longer strokes. Recommended for cylinder lubrication of the latest, highly rated low speed crosshead marine diesel engines operating on residual fuels with sulphur contents in excess of 1%.",
+    "properties": ">> Minimal piston ring and liner wear Maximum >> cleanliness Reduced engine maintenance costs >> Extended periods between overhaul Good >> compatibility with all normal seal materials >>",
+    "performance_levels": null,
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_motp_3015",
+    "name": "LEAD MOTP 3015",
+    "category": "Grease",
+    "page_ref": 58,
+    "description": "LEAD TRUNK PISTON ENGINE OIL specially designed for modern Medium Speed 4-stroke Marine Engines running Intermediate Fuel Oil (IFO) or Heavy Fuel Oil (HFO) LEAD TRUNK PISTON ENGINE OIL is a range of trunk piston engine oils developed for use in medium speed dieselengines burning residual fuels. This oil combines an exclusive formulation of latest additive technologies, and a highly refined base oil to provide a substantial safety margin to cope with the higher stress levels even with the latest and future designs of diesel engines.",
+    "application": "Turbocharged main and auxiliary engines of all types and all ratings running on Intermediate Fuel oil or on Heavy Fuel oil with high sulphur content Bearings and stern-tubes Reduction gear lubrication",
+    "properties": ">> Excellent thermal resistance and high temperature oxidation resistance Very good >> detergent and dispersant properties at high temperatures Good wear protection and oil >> film strength at extreme pressures Excellent water resistance Reduced build up heavy >> deposits in the engine leading to a reduction in maintenance costs Very good >> neutralizing capability of acidic products of combustion",
+    "performance_levels": null,
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_motp_4030",
+    "name": "LEAD MOTP 4030",
+    "category": "Grease",
+    "page_ref": 59,
+    "description": "LEAD MOTP TRUNK PISTON ENGINE OIL specially designed for modern Medium Speed 4-stroke Engines running Intermediate Fuel Oil (IFO) or Heavy Fuel Oil (HFO) LEAD TRUNK PISTON ENGINE OIL is a range of trunk piston engine oils developed for use in medium speed dieselengines burning residual fuels. This oil combines an exclusive formulation of latest additive technologies, and a highly refined base oil to provide a substantial safety margin to cope with the higher stress levels even with the latest and future designs of diesel engines.",
+    "application": "Turbocharged main and auxiliary engines of all types and all ratings running on Intermediate Fuel oil or on Heavy Fuel oil with high sulphur content Bearings and stern-tubes Reduction gear lubrication",
+    "properties": ">> Excellent thermal resistance and high temperature oxidation resistance Very good >> detergent and dispersant properties at high temperatures Good wear protection and oil >> film strength at extreme pressures Excellent water resistance Reduced build up heavy >> deposits in the engine leading to a reduction in maintenance costs Very good >> neutralizing capability of acidic products of combustion",
+    "performance_levels": null,
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_motp_4040",
+    "name": "LEAD MOTP 4040",
+    "category": "Grease",
+    "page_ref": 60,
+    "description": "LEAD MOTP TRUNK PISTON ENGINE OIL specially designed for modern Medium Speed 4-stroke Engines running Intermediate Fuel Oil (IFO) or Heavy Fuel Oil (HFO) LEAD TRUNK PISTON ENGINE OIL is a range of trunk piston engine oils developed for use in medium speed dieselengines burning residual fuels. This oil combines an exclusive formulation of latest additive technologies, and a highly refined base oil to provide a substantial safety margin to cope with the higher stress levels even with the latest and future designs of diesel engines.",
+    "application": "Turbocharged main and auxiliary engines of all types and all ratings running on Intermediate Fuel oil or on Heavy Fuel oil with high sulphur content Bearings and stern-tubes Reduction gear lubrication",
+    "properties": ">> Excellent thermal resistance and high temperature oxidation resistance Very good >> detergent and dispersant properties at high temperatures Good wear protection and oil >> film strength at extreme pressures Excellent water resistance Reduced build up heavy >> deposits in the engine leading to a reduction in maintenance costs Very good >> neutralizing capability of acidic products of combustion",
+    "performance_levels": null,
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_hypico_aw",
+    "name": "LEAD HYPICO AW",
+    "category": "Hydraulic Oil",
+    "page_ref": 63,
+    "description": "LEAD HYPICO AW – high performance demulsifying AW/EP hydraulic and general lubricating Oil",
+    "application": "LEAD HYPICO AW series are general lubricating and hydraulic oils with good ageing resistance and additives to improve corrosion protection. Good viscosity temperature behavior, good wear protection, demulsifying, good air release, contain zinc. For all systems, even if thermally-stressed.",
+    "properties": null,
+    "performance_levels": "Meets and exceeds: DIN 51524 PART 2, CATEGORY HM; ISO 6743/4, CATEGORY HM; MAN 698, Denison HF0, HF1, HF2.",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_hypico_hlp",
+    "name": "LEAD HYPICO HLP",
+    "category": "Hydraulic Oil",
+    "page_ref": 64,
+    "description": "LEAD HYPICO HLP – high detergent HLPD/EP general lubricating and hydraulic oil with excellent corrosion protection. LEAD HYPICO HLPD series are hydraulic fluids according to DIN 51 502 with outstanding corrosion protection, powerful cleaning and sludge transportation properties. Contain zinc as well as being detergent and dispersant. Used in a number of hydraulic systems as problem solvers, especially when standard oils cannot fulfil all the requirements.",
+    "application": "LEAD HYPICO HLP 10: For machine tool spindles and bobbin bearings in the textile industry. LEAD HYPICO HLP 22, 32, 68: Heavy-duty hydraulic oils with good corrosion protection up to continuous temperatures of 100 °C, for smaller gearboxes, especially when fitted with electromagnetic clutches. LEAD HYPICO 100: For larger gearboxes.",
+    "properties": null,
+    "performance_levels": "Meets and exceeds: Fulfil and surpass the minimum demands on HLPD hydraulic oils according to DIN 51 524-2. ISO 6743/4-HM with high DD performance.",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_hypico_hvi",
+    "name": "LEAD HYPICO HVI",
+    "category": "Hydraulic Oil",
+    "page_ref": 65,
+    "description": "LEAD HYPICO HVI – high performance emulsifying AW/EP hydraulic oil with a high Viscosity Index. LEAD HYPICO HVI series are hydraulic lubricating oils (machine oils) with a high Viscosity Index and additives to improve ageing resistance, corrosion protection and wear protection. Mineral oil-base and containing zinc.",
+    "application": "Suitable for all hydraulic systems, especially when a high viscosity index is specified or if excess viscosity during start- ups or insufficient viscosity at operating temperatures is a problem. High VI provides multi-grade characteristics.",
+    "properties": null,
+    "performance_levels": "Meets and exceeds: HVLP hydraulic and general lubricating oils according to DIN 51 524-3. >> ISO 6743/4, HV ISO 11158, HV. Denison HF0, HF1, HF2.",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_nano_gsh",
+    "name": "LEAD NANO GSH",
+    "category": "Transformer Oil",
+    "page_ref": 68,
+    "description": "LEAD NANO GSH – demulsifying general lubricating, spindle and hydraulic oil. LEAD NANO GSH series are spindle, hydraulic and general lubricating oils (machine oils) containing selected base oils and additives to improve ageing stability and corrosion protection.",
+    "application": "For thermally-stressed bearings and hydraulic systems with peak temperatures of approx. 120 °C.",
+    "properties": null,
+    "performance_levels": "Meets and exceeds: LEAD NANO GSH products are DIN 51524-1 (HL) hydraulic oils and DIN 51517-2 (CL) general lubricating oils, based on mineral oils, demulsifying (water repellent) and free of zinc.",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_nano_clp",
+    "name": "LEAD NANO CLP",
+    "category": "Transformer Oil",
+    "page_ref": 69,
+    "description": "LEAD NANO CLP – demulsifying high performance EP/AW gear oil and general lubricating oil. LEAD NANO CLP series are high performance, gear oils and general lubricating oils with good ageing stability and additives to improve corrosion protection (combat ferrous and nonferrous metal corrosion caused by moisture). Outstanding anti-wear characteristics – good EP/AW performance, excellent protection against scuffing and micro pitting, excellent FE8 roller bearing wear protection, good demulsifying properties, very good foaming suppression, zinc- and silicone oil-free.",
+    "application": "a Type CLP oil.",
+    "properties": null,
+    "performance_levels": "Meets and exceeds: LEAD NANO CLP according to DIN 51 517: Part3 (2004), ISO 6743-6: ISO 12925-1: CKC, CKD. US Steel 224, David Brown S1.53.10. PARAMETERS TEST METHOD UNIT LEAD NANO CLP ProductName - - 68 100 150 220 320 460 680 ASTM kg/m3 886 890 894 896 900 901 918 Density @ 15 °C D1298 °C 236 240 250 260 255 270 270 ASTMD92 Flash point Cleveland ASTM Kinematic viscosity @ 40 °C mm2/s 68 100 150 220 320 460 680 D445 Kinematic viscosity @ 100 ASTM mm2/s 8,7 11,2 14,5 18,9 24,0 30,4 36,8 °C D445 Viscosity Index ASTM - 99 98 94 96 95 95 88 D2270 The values shown above are typical values at the date of publication. LEAD Petroleum reserves the right to change these typical values without prior notice. 43",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_cyn_clp",
+    "name": "LEAD CYN CLP",
+    "category": "Transformer Oil",
+    "page_ref": 70,
+    "description": "LEAD NANO SYNTHETIC CLP – fully synthetic, high performance EP/AW gear oil based on polyalphaolefins (PAO) LEAD NANO SYNTHETIC CLP series are fully-synthetic gear and general lubricating oils with excellent thermal and ageing stability, very high viscosity index (shear-stable), out-standing low temperature characteristics, good cold flowing",
+    "application": "temperature characteristics, high, shear-stable viscosity index.",
+    "properties": "silicone oil-free.",
+    "performance_levels": "Meets and exceeds: LEAD NANO SYNTHETIC CLP series of oils surpass the minimum requirements of CLP-HC gear oils according to DIN 51 517, Part 3 together with DIN 51 502, ISO 6743-6 and ISO 12925-1: CKC, CKD, CKE, AISE 224, David Brown S1.53.101.",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_turbine_oil",
+    "name": "LEAD TURBINE OIL",
+    "category": "Turbine Oil",
+    "page_ref": 73,
+    "description": null,
+    "application": "Turbine oils for gas and steam turbines, also with gearboxes and as a control fluid for turbine plants and turbo- compressors.",
+    "properties": ">> Enhanced oxidation resistance Outstanding demulsibility Excellent filtration >> performance even in the presence of water and calcium contamination >> Outstanding rust and non-ferrous corrosion protection",
+    "performance_levels": "Meets and exceeds: L-TD and L-TG turbine oils acc. to DIN 51 515-1 and -2; ASTM D-4304 Type I & Type III; Alstom HTGD 90017; British Standard BS 489; DIN 51515 Part 1 & Part 2; DIN 51524 Part 1; General Electric GEK-32568F; ISO 8068 TGB TGSB & ISO 8068 TSA TGA; ISO 11158 HH & HL; Siemens AG TLV 9013 05 High Thermal Stability; Siemens AG TLV 9013 04 Standard Thermal Stability",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_syn_compressor_oil",
+    "name": "LEAD SYN COMPRESSOR OIL",
+    "category": "Compressor Oil",
+    "page_ref": 76,
+    "description": "LEAD SYN COMPRESSOR OILS are designed to lubricate severe-duty rotary screw and vane air compressors. Theseoutstanding synthetic air compressor oils are particularly suited for severe service applications where mineral products are not as effective.",
+    "application": "Fully-synthetic oils for all highly-stressed air compressors which require a VCL/VDL oil. For use in rotary, screw type and vane-type compressors. LEAD Lubricants can offer the best Compressor oil for your specific application.",
+    "properties": ">> Minimize downstream deposits and carryover >> Reduce the potential for fires and explosions >> Improve equipment performance and safety >> Reduce maintenance needs and associated costs",
+    "performance_levels": "Meets and exceeds: VCL/VDL air compressor oils acc. to DIN 51 506 Synthetic PAO base stock.",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_compressor_oil",
+    "name": "LEAD COMPRESSOR OIL",
+    "category": "Compressor Oil",
+    "page_ref": 77,
+    "description": "LEAD COMPRESSOR OILS are designed for compressor systems employing gears and bearings, and are highlyrecommended for crankcases. They are formulated with high-quality mineral base oils and a high-performance additive system to provide exceptional equipment protection and reliability for compressors operating under mild to severe conditions.",
+    "application": "Oils for all highly-stressed air compressors which require a VCL/VDL oil with DD additives for good dirt dislodging and dirt transportation. LEAD Lubricants can offer the best Compressor oil for your specific application.",
+    "properties": ">> Longer running periods between maintenance >> intervals Improved valve performance Lower >> maintenance costs",
+    "performance_levels": "Meets and exceeds: VCL/VDL air compressor oils according to DIN 51 506",
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  },
+  {
+    "id": "lead_centi_soluble_cutting_oil",
+    "name": "LEAD CENTI SOLUBLE CUTTING OIL",
+    "category": "Cutting Oil",
+    "page_ref": 78,
+    "description": "LEAD CENTI SOLUBLE CUTTING FLUID has been formulated to meet the requirements for the preparation of water soluble oilswhich will give stable milky emulsions in all types of water. It is using an additive which is a blend of emulsifying agents, wetting agents, and rust inhibitors, together with solvent refined mineral oils. It also contains biocides and fungicide additives to give the finished soluble oils and long service life, prevent emulsion breakdown and spoilage. It is an extremely versatile product for medium-cutting operations, provides all the lubrication and cooling properties necessary to ensure good work piece finish, and extended tool life. It is suitable on ferrous and non-ferrous metals in turning, milling, drilling, tapping, threading and cold sawing operations.",
+    "application": "It is an extremely versatile product for medium-cutting operations, provides all the lubrication and cooling",
+    "properties": "ferrous metals in turning, milling, drilling, tapping, threading and cold sawing operations.",
+    "performance_levels": null,
+    "api_level": null,
+    "certifications": [],
+    "viscosity_grades": [],
+    "specs": {
+      "grades": []
+    }
+  }
+]

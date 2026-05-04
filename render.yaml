@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: lead-petroleum-bot
+    runtime: docker
+    plan: free
+    
+    # Health check so Render knows when the app is ready
+    healthCheckPath: /health
+    
+    # Environment variables
+    env:
+      - key: LLM_BACKEND
+        value: groq
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+    
+    # Important: set GROQ_API_KEY in the Render dashboard, not here
+    # (never commit API keys to git)
+    
+    # Allow up to 2 minutes for startup (downloading dependencies, etc)
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port 8000

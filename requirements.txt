@@ -1,0 +1,15 @@
+# Core
+pdfplumber>=0.11.0
+chromadb>=0.5.0
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.0.0
+
+# LLM clients
+groq>=0.9.0          # default production backend (free tier)
+ollama>=0.3.0        # optional: only needed if switching back to local Ollama
+
+# UI
+streamlit>=1.35.0
+
+# Python standard lib is sufficient for the rest
