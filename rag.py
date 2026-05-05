@@ -22,6 +22,46 @@ HARDCODED_PRODUCTS = [
     {"id": "yotta15000", "name": "YOTTA 15000", "category": "Motorcycle Oil", "page_ref": 12},
 ]
 
+# ─── Company contact information ────────────────────────────────────────────
+CONTACT_INFO = """
+**Lead Petroleum - Contact Us:**
+
+📧 Email:
+  • General Inquiries: info@leadpetroleum.com
+  • Support: support@leadpetroleum.com
+
+📞 Phone: +971 (55) 575 7330
+
+📍 Address: G-4 Al Bahar 4, Sheikh Ammar Road, Ajman, United Arab Emirates
+
+🕒 Business Hours: Monday to Friday, 8:00 AM - 6:00 PM (Gulf Standard Time, UAE)
+
+🌐 Website: https://www.leadpetroleum.com
+
+📱 Follow Us On Social Media:
+  • Facebook: https://web.facebook.com/leadpetroleum
+  • Instagram: https://www.instagram.com/lead.petroleum/
+  • LinkedIn: https://pk.linkedin.com/company/lead-petroleum
+  • X (Twitter): https://x.com/leadpetroleum
+"""
+
+# ─── Greeting keywords ──────────────────────────────────────────────────────
+GREETING_KEYWORDS = ["hello", "hi", "hey", "greetings", "good morning", "good afternoon", "good evening", "howdy"]
+
+GREETING_RESPONSE = """
+Hello! Welcome to Lead Petroleum! 👋
+
+I'm your AI Product Assistant. I can help you find the right lubricant for your vehicle or equipment. 
+
+Feel free to ask me about:
+- Which oil is best for your car model
+- Product comparisons
+- Product specifications
+- Or anything else about Lead Petroleum
+
+How can I assist you today?
+"""
+
 
 @dataclass
 class Citation:
@@ -133,6 +173,37 @@ class RAGEngine:
 
     def _process(self, query: str) -> Answer:
         """Process a query and return an answer."""
+        query_lower = query.lower().strip()
+        
+        # Check for greetings first
+        if any(greeting in query_lower for greeting in GREETING_KEYWORDS):
+            return Answer(
+                text=GREETING_RESPONSE,
+                intent=Intent.GENERAL,
+                citations=[],
+                confidence=0.95
+            )
+        
+        # Check if user is asking for contact information
+        contact_keywords = ["contact", "phone", "email", "address", "location", "call", "reach", "get in touch", "how to contact", "social media", "facebook", "instagram", "linkedin", "twitter"]
+        if any(keyword in query_lower for keyword in contact_keywords):
+            return Answer(
+                text=CONTACT_INFO,
+                intent=Intent.GENERAL,
+                citations=[],
+                confidence=0.95
+            )
+        
+        # Check if query is completely irrelevant or bogus
+        irrelevant_keywords = ["weather", "politics", "sports", "movie", "recipe", "joke", "math problem", "how to cook", "best restaurant"]
+        if any(keyword in query_lower for keyword in irrelevant_keywords):
+            return Answer(
+                text="I'm specifically designed to help with Lead Petroleum lubricant products. Please ask me about oils, lubricants, or related topics, and I'll be happy to assist! 😊",
+                intent=Intent.GENERAL,
+                citations=[],
+                confidence=0.9
+            )
+        
         # Classify intent
         intent_result = classify(query)
         intent = intent_result.intent
@@ -140,15 +211,24 @@ class RAGEngine:
         # Get relevant products
         products = self.retriever.search(query, top_k=3)
 
-        # Generate answer
+        # Generate answer based on intent and product availability
+        if not products:
+            # No products found
+            return Answer(
+                text=f"I couldn't find specific product information for that query. Please contact us for personalized assistance:\n\n{CONTACT_INFO}",
+                intent=intent,
+                citations=[],
+                confidence=0.6
+            )
+
         if intent == Intent.EXACT_SPEC:
-            text = f"Based on our catalogue, here are products that match your query: {', '.join(p['name'] for p in products)}"
+            text = f"Based on our catalogue, here are products that match your query:\n\n• {chr(10).join(p['name'] for p in products)}\n\nFor detailed specifications, please visit our website at https://www.leadpetroleum.com or contact us."
         elif intent == Intent.COMPARE:
-            text = f"Comparing: {', '.join(p['name'] for p in products)}. Please refer to our catalogue for detailed specifications."
+            text = f"Comparing these products:\n\n• {chr(10).join(p['name'] for p in products)}\n\nFor detailed comparison and specifications, please refer to our website or contact us for more information."
         elif intent == Intent.RECOMMEND:
-            text = f"We recommend: {', '.join(p['name'] for p in products)}. Visit our website for more details."
+            text = f"We recommend the following products for your needs:\n\n• {chr(10).join(p['name'] for p in products)}\n\nVisit our website at https://www.leadpetroleum.com for more details, or feel free to contact us for personalized recommendations."
         else:
-            text = "Thank you for your interest in Lead Petroleum. Please visit leadpetroleum.com or contact us for more information."
+            text = f"Based on your query, here are some relevant products:\n\n• {chr(10).join(p['name'] for p in products)}\n\nFor more information, please visit https://www.leadpetroleum.com or contact us."
 
         citations = [Citation(p["name"], p.get("page_ref", "N/A")) for p in products]
 
