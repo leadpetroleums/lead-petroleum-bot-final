@@ -18,12 +18,12 @@ from llm import LLM, get_llm
 
 # ─── Product catalogue (hardcoded fallback) ─────────────────────────────────
 HARDCODED_PRODUCTS = [
-    {"id": "mega7000", "name": "MEGA 7000", "category": "Petrol Engine Oil", "page_ref": 5},
-    {"id": "giga10000", "name": "GIGA 10000", "category": "Diesel Engine Oil", "page_ref": 8},
-    {"id": "yotta15000", "name": "YOTTA 15000", "category": "Motorcycle Oil", "page_ref": 12},
+    {"id": "mega7000",   "name": "MEGA 7000",   "category": "Petrol Engine Oil",  "page_ref": 5},
+    {"id": "giga10000",  "name": "GIGA 10000",  "category": "Diesel Engine Oil",  "page_ref": 8},
+    {"id": "yotta15000", "name": "YOTTA 15000", "category": "Motorcycle Oil",     "page_ref": 12},
 ]
 
-# ─── Company contact information ────────────────────────────────────────────
+# ─── Company contact information ─────────────────────────────────────────────
 CONTACT_INFO = """
 **Lead Petroleum - Contact Us:**
 
@@ -35,68 +35,123 @@ CONTACT_INFO = """
 
 📍 Address: G-4 Al Bahar 4, Sheikh Ammar Road, Ajman, United Arab Emirates
 
-🕒 Business Hours: Monday to Friday, 8:00 AM - 6:00 PM (Gulf Standard Time, UAE)
+🕒 Business Hours: Monday to Friday, 8:00 AM – 6:00 PM (Gulf Standard Time, UAE)
 
 🌐 Website: https://www.leadpetroleum.com
 
 📱 Follow Us On Social Media:
-  • Facebook: https://web.facebook.com/leadpetroleum
+  • Facebook:  https://web.facebook.com/leadpetroleum
   • Instagram: https://www.instagram.com/lead.petroleum/
-  • LinkedIn: https://pk.linkedin.com/company/lead-petroleum
-  • X (Twitter): https://x.com/leadpetroleum
+  • LinkedIn:  https://pk.linkedin.com/company/lead-petroleum
+  • X:         https://x.com/leadpetroleum
 """
 
-# ─── Greeting keywords ──────────────────────────────────────────────────────
-GREETING_KEYWORDS = [
-    "hello", "hi", "hey", "greetings",
-    "good morning", "good afternoon", "good evening", "howdy",
+# ─── Intent buckets ──────────────────────────────────────────────────────────
+
+# Pure greetings — respond warmly, no products
+_GREETING_PHRASES: list[str] = [
+    "hi", "hello", "hey", "yo",
+    "hi there", "hello there", "hey there",
+    "salam", "slm", "assalamualaikum", "aslam o alaikum",
+    "walaikum assalam", "wa alaikum assalam", "aoa",
+    "good morning", "good afternoon", "good evening", "good night",
 ]
 
-GREETING_RESPONSE = """
-Hello! Welcome to Lead Petroleum! 👋
+# "How are you" variants — respond politely, no products
+_HOW_ARE_YOU_PHRASES: list[str] = [
+    "how are you", "how r u", "how are u", "how're you",
+    "kaisay ho", "kaisy ho", "kya haal hai", "kaise ho",
+    "what's up", "wassup", "sup", "whats up",
+    "are you there", "anyone there", "you there",
+]
 
-I'm your AI Product Assistant. I can help you find the right lubricant for your vehicle or equipment. 
+# Acknowledgements — brief reply, no products
+_ACK_PHRASES: list[str] = [
+    "ok", "okay", "ok.", "okay.", "k",
+    "thanks", "thank you", "thx", "ty",
+    "great", "nice", "cool", "perfect", "awesome", "got it",
+    "noted", "alright", "sure",
+]
 
-Feel free to ask me about:
-- Which oil is best for your car model
-- Product comparisons
-- Product specifications
-- Or anything else about Lead Petroleum
+# Contact triggers
+_CONTACT_KEYWORDS: list[str] = [
+    "contact", "phone", "email", "address", "location",
+    "call", "reach", "get in touch", "how to contact",
+    "social media", "facebook", "instagram", "linkedin", "twitter",
+    "website", "office",
+]
 
-How can I assist you today?
-"""
+# Off-topic triggers
+_OFFTOPIC_KEYWORDS: list[str] = [
+    "weather", "politics", "sports", "movie", "recipe",
+    "joke", "math", "how to cook", "best restaurant", "news",
+    "game", "music", "song",
+]
+
+# Signals that the user is asking about a product/vehicle
+_PRODUCT_SIGNALS: list[str] = [
+    "oil", "lubricant", "engine", "grease", "fluid",
+    "car", "vehicle", "truck", "bike", "motorcycle",
+    "diesel", "petrol", "gear", "transmission", "hydraulic",
+    "recommend", "suggest", "best for", "which oil", "what oil",
+    "spec", "viscosity", "grade",
+]
 
 
-def _is_greeting(query_lower: str) -> bool:
-    """
-    Return True only when the query is (or starts with) a standalone greeting.
+# ─── Helpers ─────────────────────────────────────────────────────────────────
 
-    Uses whole-word regex matching so that substrings like 'hi' inside 'which'
-    or 'hey' inside 'they' do NOT trigger a false positive.
+def _whole_word(phrase: str) -> re.Pattern:
+    """Compile a whole-word regex for a phrase (handles spaces too)."""
+    return re.compile(r"(?<!\w)" + re.escape(phrase) + r"(?!\w)", re.IGNORECASE)
 
-    Examples
-    --------
-    "hi"                                  → True   ✅
-    "hello there"                         → True   ✅
-    "okay, let me know which oil is best" → False  ✅  (was broken before)
-    "which lubricant for kia stonic?"     → False  ✅  (was broken before)
-    """
-    for keyword in GREETING_KEYWORDS:
-        # \b = word boundary; re.escape handles multi-word phrases safely
-        pattern = r"\b" + re.escape(keyword) + r"\b"
-        if re.search(pattern, query_lower):
-            # Extra guard: reject if the query is clearly a product/spec question
-            # even though it happens to contain a greeting word.
-            product_signals = [
-                "oil", "lubricant", "engine", "which", "best", "recommend",
-                "car", "vehicle", "diesel", "petrol", "motorcycle", "spec",
-                "compare", "contact", "phone", "email",
-            ]
-            if any(sig in query_lower for sig in product_signals):
-                return False
+
+def _matches_any(text: str, phrases: list[str]) -> bool:
+    """Return True if *text* exactly matches (whole-word) any phrase in the list."""
+    text = text.strip()
+    for phrase in phrases:
+        if _whole_word(phrase).fullmatch(text) or _whole_word(phrase).search(text):
+            # fullmatch for exact single-phrase input; search for phrase inside text
+            pass
+        # Simpler: check if the cleaned text equals the phrase, or the text
+        # is *only* that phrase (with punctuation stripped).
+    stripped = re.sub(r"[^\w\s]", "", text).strip().lower()
+    for phrase in phrases:
+        if stripped == phrase.lower():
+            return True
+        # Also check whole-word presence for multi-word phrases
+        if _whole_word(phrase).search(text):
             return True
     return False
 
+
+def _is_pure_greeting(query: str) -> bool:
+    return _matches_any(query, _GREETING_PHRASES)
+
+
+def _is_how_are_you(query: str) -> bool:
+    return _matches_any(query, _HOW_ARE_YOU_PHRASES)
+
+
+def _is_acknowledgement(query: str) -> bool:
+    return _matches_any(query, _ACK_PHRASES)
+
+
+def _is_contact_query(query: str) -> bool:
+    q = query.lower()
+    return any(kw in q for kw in _CONTACT_KEYWORDS)
+
+
+def _is_offtopic(query: str) -> bool:
+    q = query.lower()
+    return any(kw in q for kw in _OFFTOPIC_KEYWORDS)
+
+
+def _has_product_signal(query: str) -> bool:
+    q = query.lower()
+    return any(sig in q for sig in _PRODUCT_SIGNALS)
+
+
+# ─── Data classes ─────────────────────────────────────────────────────────────
 
 @dataclass
 class Citation:
@@ -112,17 +167,18 @@ class Answer:
     confidence: float = 0.8
 
 
+# ─── Retriever ────────────────────────────────────────────────────────────────
+
 class ProductRetriever:
-    """Retrieves products from ChromaDB or returns hardcoded fallback."""
+    """Retrieves products from ChromaDB or falls back to keyword search."""
 
     def __init__(self, catalogue_path: Path | None = None):
         self.catalogue_path = catalogue_path or Path("catalogue.json")
-        self.products = []
+        self.products: list[dict] = []
         self.db = None
         self._initialized = False
 
-    def _lazy_init(self):
-        """Lazy initialization — only load on first use."""
+    def _lazy_init(self) -> None:
         if self._initialized:
             return
         self._initialized = True
@@ -134,27 +190,27 @@ class ProductRetriever:
                     self.products = json.load(f)
             else:
                 self.products = HARDCODED_PRODUCTS
-        except Exception as e:
-            print(f"Warning: Failed to load catalogue: {e}. Using hardcoded fallback.")
+        except Exception as exc:
+            print(f"Warning: Failed to load catalogue: {exc}. Using hardcoded fallback.")
             self.products = HARDCODED_PRODUCTS
 
         try:
             self.db = chromadb.Client()
             if self.products:
                 embedder = embedding_functions.DefaultEmbeddingFunction()
-                self.db.get_or_create_collection(
+                col = self.db.get_or_create_collection(
                     name="products",
                     embedding_function=embedder,
-                    metadata={"hnsw:space": "cosine"}
+                    metadata={"hnsw:space": "cosine"},
                 )
                 for p in self.products:
-                    self.db.get_collection("products").add(
+                    col.add(
                         ids=[p["id"]],
                         metadatas=[{"name": p["name"], "category": p["category"]}],
-                        documents=[f"{p['name']} {p['category']}"]
+                        documents=[f"{p['name']} {p['category']}"],
                     )
-        except Exception as e:
-            print(f"Warning: ChromaDB initialization failed: {e}. Using keyword search fallback.")
+        except Exception as exc:
+            print(f"Warning: ChromaDB init failed: {exc}. Using keyword fallback.")
             self.db = None
 
     def all_products(self) -> list[dict]:
@@ -163,25 +219,27 @@ class ProductRetriever:
 
     def search(self, query: str, top_k: int = 5) -> list[dict]:
         self._lazy_init()
-
         if not self.products:
             return []
 
         if self.db:
             try:
                 results = self.db.get_collection("products").query(
-                    query_texts=[query],
-                    n_results=top_k
+                    query_texts=[query], n_results=top_k
                 )
                 if results and results["ids"]:
-                    return [p for p in self.products if p["id"] in results["ids"][0]]
+                    ids = results["ids"][0]
+                    return [p for p in self.products if p["id"] in ids]
             except Exception:
                 pass
 
-        query_lower = query.lower()
-        matches = [p for p in self.products if query_lower in p.get("name", "").lower()]
+        # Keyword fallback
+        q = query.lower()
+        matches = [p for p in self.products if q in p.get("name", "").lower()]
         return matches[:top_k]
 
+
+# ─── RAG Engine ───────────────────────────────────────────────────────────────
 
 class RAGEngine:
     """RAG engine for Lead Petroleum product queries."""
@@ -194,93 +252,108 @@ class RAGEngine:
         return self._process(query)
 
     def stream(self, query: str) -> Iterator[str]:
-        result = self._process(query)
-        yield result.text
+        yield self._process(query).text
 
-    def _process(self, query: str) -> Answer:
-        query_lower = query.lower().strip()
+    # ── Core logic ────────────────────────────────────────────────────────────
 
-        # ── 1. Greeting check (whole-word, not substring) ──────────────────
-        if _is_greeting(query_lower):
+    def _process(self, query: str) -> Answer:  # noqa: C901
+        q = query.strip()
+
+        # ── 1. Pure greeting ─────────────────────────────────────────────────
+        if _is_pure_greeting(q):
             return Answer(
-                text=GREETING_RESPONSE,
+                text=(
+                    "Hello! 👋 I'm your Lead Petroleum AI Assistant. "
+                    "I can help you find the right lubricant for your vehicle or equipment. "
+                    "What can I help you with today?"
+                ),
                 intent=Intent.GENERAL,
-                citations=[],
-                confidence=0.95,
+                confidence=0.98,
             )
 
-        # ── 2. Contact-information check ────────────────────────────────────
-        contact_keywords = [
-            "contact", "phone", "email", "address", "location",
-            "call", "reach", "get in touch", "how to contact",
-            "social media", "facebook", "instagram", "linkedin", "twitter",
-        ]
-        if any(kw in query_lower for kw in contact_keywords):
+        # ── 2. "How are you" / casual check-in ──────────────────────────────
+        if _is_how_are_you(q):
+            return Answer(
+                text="I'm doing great, thanks for asking! 😊 How can I assist you today?",
+                intent=Intent.GENERAL,
+                confidence=0.98,
+            )
+
+        # ── 3. Acknowledgement (ok / thanks / great …) ───────────────────────
+        if _is_acknowledgement(q):
+            return Answer(
+                text="You're welcome! Let me know if you need anything else. 😊",
+                intent=Intent.GENERAL,
+                confidence=0.97,
+            )
+
+        # ── 4. Contact information ────────────────────────────────────────────
+        if _is_contact_query(q):
             return Answer(
                 text=CONTACT_INFO,
                 intent=Intent.GENERAL,
-                citations=[],
                 confidence=0.95,
             )
 
-        # ── 3. Off-topic / irrelevant check ────────────────────────────────
-        irrelevant_keywords = [
-            "weather", "politics", "sports", "movie", "recipe",
-            "joke", "math problem", "how to cook", "best restaurant",
-        ]
-        if any(kw in query_lower for kw in irrelevant_keywords):
+        # ── 5. Off-topic ─────────────────────────────────────────────────────
+        if _is_offtopic(q):
             return Answer(
                 text=(
                     "I'm specifically designed to help with Lead Petroleum lubricant products. "
-                    "Please ask me about oils, lubricants, or related topics, and I'll be happy to assist! 😊"
+                    "Please ask me about oils, lubricants, or related topics and I'll be happy to assist! 😊"
                 ),
                 intent=Intent.GENERAL,
-                citations=[],
-                confidence=0.9,
+                confidence=0.90,
             )
 
-        # ── 4. Product / recommendation path ───────────────────────────────
-        intent_result = classify(query)
-        intent = intent_result.intent
+        # ── 6. Vague query — no clear product signal ──────────────────────────
+        if not _has_product_signal(q):
+            return Answer(
+                text=(
+                    "Could you please share your vehicle model or describe your usage "
+                    "so I can recommend the best lubricant for you? 🚗"
+                ),
+                intent=Intent.GENERAL,
+                confidence=0.75,
+            )
 
-        products = self.retriever.search(query, top_k=3)
+        # ── 7. Product / recommendation path ─────────────────────────────────
+        intent_result = classify(q)
+        intent = intent_result.intent
+        products = self.retriever.search(q, top_k=3)
 
         if not products:
             return Answer(
                 text=(
-                    "I couldn't find specific product information for that query. "
-                    f"Please contact us for personalized assistance:\n\n{CONTACT_INFO}"
+                    "I couldn't find a specific product match for your query. "
+                    "Please contact us for personalized assistance:\n\n" + CONTACT_INFO
                 ),
                 intent=intent,
-                citations=[],
-                confidence=0.6,
+                confidence=0.60,
             )
 
-        product_list = "\n".join(f"• {p['name']}" for p in products)
+        product_list = "\n".join(f"• {p['name']} ({p['category']})" for p in products)
 
         if intent == Intent.EXACT_SPEC:
             text = (
-                f"Based on our catalogue, here are products that match your query:\n\n"
-                f"{product_list}\n\n"
-                "For detailed specifications, please visit our website at "
-                "https://www.leadpetroleum.com or contact us."
+                f"Here are the products that match your requirements:\n\n{product_list}\n\n"
+                "For full specifications visit https://www.leadpetroleum.com or contact us."
             )
         elif intent == Intent.COMPARE:
             text = (
-                f"Comparing these products:\n\n{product_list}\n\n"
-                "For a detailed comparison and specifications, please refer to our website "
-                "or contact us for more information."
+                f"Here's a comparison of relevant products:\n\n{product_list}\n\n"
+                "For detailed specs and a side-by-side comparison, visit our website or contact us."
             )
         elif intent == Intent.RECOMMEND:
             text = (
-                f"We recommend the following products for your needs:\n\n{product_list}\n\n"
-                "Visit our website at https://www.leadpetroleum.com for more details, "
-                "or feel free to contact us for personalized recommendations."
+                f"Based on your needs, I recommend:\n\n{product_list}\n\n"
+                "Visit https://www.leadpetroleum.com for more details, "
+                "or contact us for personalized advice."
             )
         else:
             text = (
-                f"Based on your query, here are some relevant products:\n\n{product_list}\n\n"
-                "For more information, please visit https://www.leadpetroleum.com or contact us."
+                f"Here are some relevant products for your query:\n\n{product_list}\n\n"
+                "For more information visit https://www.leadpetroleum.com or contact us."
             )
 
         citations = [Citation(p["name"], p.get("page_ref", "N/A")) for p in products]
