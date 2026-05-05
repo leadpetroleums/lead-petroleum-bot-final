@@ -4,6 +4,7 @@ Retrieves products from ChromaDB, classifies intent, and generates answers.
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterator
@@ -46,7 +47,10 @@ CONTACT_INFO = """
 """
 
 # ─── Greeting keywords ──────────────────────────────────────────────────────
-GREETING_KEYWORDS = ["hello", "hi", "hey", "greetings", "good morning", "good afternoon", "good evening", "howdy"]
+GREETING_KEYWORDS = [
+    "hello", "hi", "hey", "greetings",
+    "good morning", "good afternoon", "good evening", "howdy",
+]
 
 GREETING_RESPONSE = """
 Hello! Welcome to Lead Petroleum! 👋
@@ -61,6 +65,37 @@ Feel free to ask me about:
 
 How can I assist you today?
 """
+
+
+def _is_greeting(query_lower: str) -> bool:
+    """
+    Return True only when the query is (or starts with) a standalone greeting.
+
+    Uses whole-word regex matching so that substrings like 'hi' inside 'which'
+    or 'hey' inside 'they' do NOT trigger a false positive.
+
+    Examples
+    --------
+    "hi"                                  → True   ✅
+    "hello there"                         → True   ✅
+    "okay, let me know which oil is best" → False  ✅  (was broken before)
+    "which lubricant for kia stonic?"     → False  ✅  (was broken before)
+    """
+    for keyword in GREETING_KEYWORDS:
+        # \b = word boundary; re.escape handles multi-word phrases safely
+        pattern = r"\b" + re.escape(keyword) + r"\b"
+        if re.search(pattern, query_lower):
+            # Extra guard: reject if the query is clearly a product/spec question
+            # even though it happens to contain a greeting word.
+            product_signals = [
+                "oil", "lubricant", "engine", "which", "best", "recommend",
+                "car", "vehicle", "diesel", "petrol", "motorcycle", "spec",
+                "compare", "contact", "phone", "email",
+            ]
+            if any(sig in query_lower for sig in product_signals):
+                return False
+            return True
+    return False
 
 
 @dataclass
@@ -103,7 +138,6 @@ class ProductRetriever:
             print(f"Warning: Failed to load catalogue: {e}. Using hardcoded fallback.")
             self.products = HARDCODED_PRODUCTS
 
-        # Try to initialize ChromaDB
         try:
             self.db = chromadb.Client()
             if self.products:
@@ -113,7 +147,6 @@ class ProductRetriever:
                     embedding_function=embedder,
                     metadata={"hnsw:space": "cosine"}
                 )
-                # Index products
                 for p in self.products:
                     self.db.get_collection("products").add(
                         ids=[p["id"]],
@@ -125,18 +158,15 @@ class ProductRetriever:
             self.db = None
 
     def all_products(self) -> list[dict]:
-        """Return all products."""
         self._lazy_init()
         return self.products
 
     def search(self, query: str, top_k: int = 5) -> list[dict]:
-        """Search for products matching the query."""
         self._lazy_init()
 
         if not self.products:
             return []
 
-        # Try ChromaDB first
         if self.db:
             try:
                 results = self.db.get_collection("products").query(
@@ -148,7 +178,6 @@ class ProductRetriever:
             except Exception:
                 pass
 
-        # Fallback: keyword search
         query_lower = query.lower()
         matches = [p for p in self.products if query_lower in p.get("name", "").lower()]
         return matches[:top_k]
@@ -162,73 +191,97 @@ class RAGEngine:
         self.llm = llm or get_llm()
 
     def answer(self, query: str) -> Answer:
-        """Generate a single answer (non-streaming)."""
-        result = self._process(query)
-        return result
+        return self._process(query)
 
     def stream(self, query: str) -> Iterator[str]:
-        """Generate answer as a stream of tokens."""
         result = self._process(query)
         yield result.text
 
     def _process(self, query: str) -> Answer:
-        """Process a query and return an answer."""
         query_lower = query.lower().strip()
-        
-        # Check for greetings first
-        if any(greeting in query_lower for greeting in GREETING_KEYWORDS):
+
+        # ── 1. Greeting check (whole-word, not substring) ──────────────────
+        if _is_greeting(query_lower):
             return Answer(
                 text=GREETING_RESPONSE,
                 intent=Intent.GENERAL,
                 citations=[],
-                confidence=0.95
+                confidence=0.95,
             )
-        
-        # Check if user is asking for contact information
-        contact_keywords = ["contact", "phone", "email", "address", "location", "call", "reach", "get in touch", "how to contact", "social media", "facebook", "instagram", "linkedin", "twitter"]
-        if any(keyword in query_lower for keyword in contact_keywords):
+
+        # ── 2. Contact-information check ────────────────────────────────────
+        contact_keywords = [
+            "contact", "phone", "email", "address", "location",
+            "call", "reach", "get in touch", "how to contact",
+            "social media", "facebook", "instagram", "linkedin", "twitter",
+        ]
+        if any(kw in query_lower for kw in contact_keywords):
             return Answer(
                 text=CONTACT_INFO,
                 intent=Intent.GENERAL,
                 citations=[],
-                confidence=0.95
+                confidence=0.95,
             )
-        
-        # Check if query is completely irrelevant or bogus
-        irrelevant_keywords = ["weather", "politics", "sports", "movie", "recipe", "joke", "math problem", "how to cook", "best restaurant"]
-        if any(keyword in query_lower for keyword in irrelevant_keywords):
+
+        # ── 3. Off-topic / irrelevant check ────────────────────────────────
+        irrelevant_keywords = [
+            "weather", "politics", "sports", "movie", "recipe",
+            "joke", "math problem", "how to cook", "best restaurant",
+        ]
+        if any(kw in query_lower for kw in irrelevant_keywords):
             return Answer(
-                text="I'm specifically designed to help with Lead Petroleum lubricant products. Please ask me about oils, lubricants, or related topics, and I'll be happy to assist! 😊",
+                text=(
+                    "I'm specifically designed to help with Lead Petroleum lubricant products. "
+                    "Please ask me about oils, lubricants, or related topics, and I'll be happy to assist! 😊"
+                ),
                 intent=Intent.GENERAL,
                 citations=[],
-                confidence=0.9
+                confidence=0.9,
             )
-        
-        # Classify intent
+
+        # ── 4. Product / recommendation path ───────────────────────────────
         intent_result = classify(query)
         intent = intent_result.intent
 
-        # Get relevant products
         products = self.retriever.search(query, top_k=3)
 
-        # Generate answer based on intent and product availability
         if not products:
-            # No products found
             return Answer(
-                text=f"I couldn't find specific product information for that query. Please contact us for personalized assistance:\n\n{CONTACT_INFO}",
+                text=(
+                    "I couldn't find specific product information for that query. "
+                    f"Please contact us for personalized assistance:\n\n{CONTACT_INFO}"
+                ),
                 intent=intent,
                 citations=[],
-                confidence=0.6
+                confidence=0.6,
             )
 
+        product_list = "\n".join(f"• {p['name']}" for p in products)
+
         if intent == Intent.EXACT_SPEC:
-            text = f"Based on our catalogue, here are products that match your query:\n\n• {chr(10).join(p['name'] for p in products)}\n\nFor detailed specifications, please visit our website at https://www.leadpetroleum.com or contact us."
+            text = (
+                f"Based on our catalogue, here are products that match your query:\n\n"
+                f"{product_list}\n\n"
+                "For detailed specifications, please visit our website at "
+                "https://www.leadpetroleum.com or contact us."
+            )
         elif intent == Intent.COMPARE:
-            text = f"Comparing these products:\n\n• {chr(10).join(p['name'] for p in products)}\n\nFor detailed comparison and specifications, please refer to our website or contact us for more information."
+            text = (
+                f"Comparing these products:\n\n{product_list}\n\n"
+                "For a detailed comparison and specifications, please refer to our website "
+                "or contact us for more information."
+            )
         elif intent == Intent.RECOMMEND:
-            text = f"We recommend the following products for your needs:\n\n• {chr(10).join(p['name'] for p in products)}\n\nVisit our website at https://www.leadpetroleum.com for more details, or feel free to contact us for personalized recommendations."
+            text = (
+                f"We recommend the following products for your needs:\n\n{product_list}\n\n"
+                "Visit our website at https://www.leadpetroleum.com for more details, "
+                "or feel free to contact us for personalized recommendations."
+            )
         else:
-            text = f"Based on your query, here are some relevant products:\n\n• {chr(10).join(p['name'] for p in products)}\n\nFor more information, please visit https://www.leadpetroleum.com or contact us."
+            text = (
+                f"Based on your query, here are some relevant products:\n\n{product_list}\n\n"
+                "For more information, please visit https://www.leadpetroleum.com or contact us."
+            )
 
         citations = [Citation(p["name"], p.get("page_ref", "N/A")) for p in products]
 
@@ -236,5 +289,5 @@ class RAGEngine:
             text=text,
             intent=intent,
             citations=citations,
-            confidence=0.85
+            confidence=0.85,
         )
